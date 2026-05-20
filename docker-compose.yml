@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  openapi-merger:
+    image: petarmc/openapi-merger:latest
+    ports:
+      - "80:80"
+    environment:
+      # Backend port is read by the app (default 3000) but nginx listens on 80.
+      - NODE_ENV=production
+    restart: unless-stopped

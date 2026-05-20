@@ -40,7 +40,7 @@ export async function mergeOpenApiSpecs(payload: {
 
   formData.append('rawSpecs', JSON.stringify(payload.rawSpecs));
 
-  const response = await fetch(`${apiBase}/api/merge`, {
+  const response = await fetch(`${apiBase}/merge`, {
     method: 'POST',
     body: formData,
   });
